@@ -1,35 +1,35 @@
-const {Schema, model} = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 const StudentSchema = Schema({
-    nombre:{
+    nombre: {
         type: String,
         require: [true, 'El nombre debe de ser obligatorio']
     },
-    correo:{
+    correo: {
         type: String,
-        require: [true, 'el correo debe res obligatorio'],
+        require: [true, 'el correo es obligatorio'],
         unique: true
     },
-    password:{
+    password: {
         type: String,
         require: [true, 'la clave es obligatoria']
     },
-    curso:{
+    curso: {
         type: String,
         require: [true, 'el curso es obligatorio']
     },
-    img:{
+    img: {
         type: String
     },
-    role:{
+    role: {
         type: String,
         enum: ["STUDENT_ROLE"]
     },
-    estado:{
+    estado: {
         type: Boolean,
         default: true
     },
-    google:{
+    google: {
         type: Boolean,
         default: false
     }
