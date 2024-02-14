@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Teacher",
+    "dateExported": "2024-02-14T06:13:35.484Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "7114e3c0-a02a-44c9-a94a-e81510dba2ee",
+            "colId": "21d528a5-a5eb-4d29-8544-157ca126e603",
+            "containerId": "",
+            "name": "teacherPOST",
+            "url": "localhost:3000/api/teacher",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-14T05:42:05.026Z",
+            "modified": "2024-02-14T05:49:13.837Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Pablo\",\n  \"correo\": \"pablo321@kinal.edu\",\n  \"password\": \"249032w904\",\n  \"curso\": \"Ciencias\",\n  \"role\": \"TEACHER_ROLE\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b785bcb4-44dd-46a3-9360-11f4257fab5b",
+            "colId": "21d528a5-a5eb-4d29-8544-157ca126e603",
+            "containerId": "",
+            "name": "teacherGET",
+            "url": "localhost:3000/api/teacher/65cc5439da416984ba264309",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-14T05:49:46.531Z",
+            "modified": "2024-02-14T05:54:08.686Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7c2c1837-d440-4825-947c-11cd83ab4c47",
+            "colId": "21d528a5-a5eb-4d29-8544-157ca126e603",
+            "containerId": "",
+            "name": "teacherPUT",
+            "url": "localhost:3000/api/teacher/65cc53b5da416984ba2642ff",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-14T05:50:22.776Z",
+            "modified": "2024-02-14T05:51:55.739Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Paulo\",\n  \"correo\": \"paulo9076@kinal.edu\",\n  \"password\": \"24319013934\",\n  \"curso\": \"Aviacion\",\n  \"role\": \"TEACHER_ROLE\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "fa066c2b-d9ed-443d-8caf-4dbe1c230fdc",
+            "colId": "21d528a5-a5eb-4d29-8544-157ca126e603",
+            "containerId": "",
+            "name": "teacherDELETE",
+            "url": "localhost:3000/api/teacher/65cc5439da416984ba264309",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-02-14T05:53:28.439Z",
+            "modified": "2024-02-14T05:53:53.767Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
