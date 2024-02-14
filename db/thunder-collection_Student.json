@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Student",
+    "dateExported": "2024-02-14T04:48:20.703Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "4c4115f2-cf65-4c5e-9522-0519fc6864f8",
+            "colId": "40d1f755-c188-43ac-b109-f48ee1f75c6f",
+            "containerId": "",
+            "name": "studentPost",
+            "url": "localhost:3000/api/student",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-14T03:40:40.095Z",
+            "modified": "2024-02-14T04:06:01.996Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Javier\",\n  \"correo\": \"Aamarillo@kinal.edu\",\n  \"password\": \"124563123\",\n  \"curso\": \"Matematicas\",\n  \"role\": \"STUDENT_ROLE\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ffac7700-664e-4cce-9de4-5f4de893a414",
+            "colId": "40d1f755-c188-43ac-b109-f48ee1f75c6f",
+            "containerId": "",
+            "name": "studentGET",
+            "url": "localhost:3000/api/student/65cc3954ee0cb3bcbd79e72f",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-14T04:01:41.190Z",
+            "modified": "2024-02-14T04:22:43.661Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c422e975-d632-421a-97ba-122202da234f",
+            "colId": "40d1f755-c188-43ac-b109-f48ee1f75c6f",
+            "containerId": "",
+            "name": "studentPUT",
+            "url": "localhost:3000/api/student/65cc3954ee0cb3bcbd79e72f",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-02-14T04:04:11.760Z",
+            "modified": "2024-02-14T04:43:37.887Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Marcealo\",\n  \"correo\": \"Marcelo123@gmail.com\",\n  \"password\": \"098923922\",\n  \"curso\": \"Matematica\",\n  \"role\": \"STUDENT_ROLE\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4df49ad4-7008-4dd5-9fd2-2ad261a29413",
+            "colId": "40d1f755-c188-43ac-b109-f48ee1f75c6f",
+            "containerId": "",
+            "name": "StudentDELETE ",
+            "url": "localhost:3000/api/student//65cc3c29ee0cb3bcbd79e73f",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-02-14T04:05:10.538Z",
+            "modified": "2024-02-14T04:15:35.670Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
