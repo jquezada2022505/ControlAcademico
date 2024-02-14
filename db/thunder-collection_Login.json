@@ -1,0 +1,28 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Login",
+    "dateExported": "2024-02-14T23:27:19.203Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "039ab4dc-f430-4f10-97da-c418e3a8c531",
+            "colId": "fc635d4c-4a44-463c-8592-fbdc0f1bc4df",
+            "containerId": "",
+            "name": "login",
+            "url": "localhost:3000/api/auth/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-14T20:08:33.372Z",
+            "modified": "2024-02-14T23:08:54.876Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"correo\": \"pablo321@kinal.edu\",\n  \"password\": \"249032w904\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
