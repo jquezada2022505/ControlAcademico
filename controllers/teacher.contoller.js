@@ -1,15 +1,15 @@
 const bcryptjs = require('bcryptjs');
 const Teacher = require('../models/teacher');
 
-const teacherGet = async (req, res = response) => {
+const teacherGet = async(req, res = response) => {
     const { limite, desde } = req.query;
     const query = { estado: true };
 
     const [total, teacher] = await Promise.all([
         Teacher.countDocuments(query),
         Teacher.find(query)
-            .skip(Number(desde))
-            .limit(Number(limite))
+        .skip(Number(desde))
+        .limit(Number(limite))
     ]);
 
     res.status(200).json({
@@ -18,7 +18,7 @@ const teacherGet = async (req, res = response) => {
     });
 }
 
-const getTeacherById = async (req, res) => {
+const getTeacherById = async(req, res) => {
     const { id } = req.params;
     const teacher = await Teacher.findOne({ _id: id });
 
@@ -27,11 +27,11 @@ const getTeacherById = async (req, res) => {
     });
 }
 
-const putTeacher = async (req, res = response) =>{
-    const {id } = req.params;
-    const {_id, password, google, correo, ...resto} = req.body
+const putTeacher = async(req, res = response) => {
+    const { id } = req.params;
+    const { _id, password, google, role, ...resto } = req.body
 
-    if(password){
+    if (password) {
         const salt = bcryptjs.genSaltSync();
         resto.password = bcryptjs.hashSync(password, salt);
     }
@@ -44,9 +44,9 @@ const putTeacher = async (req, res = response) =>{
     });
 }
 
-const teacherDelete = async (req, res) =>{
-    const{id} = req.params;
-    const teacher = await Teacher.findByIdAndUpdate(id, {estado: false});
+const teacherDelete = async(req, res) => {
+    const { id } = req.params;
+    const teacher = await Teacher.findByIdAndUpdate(id, { estado: false });
 
     res.status(200).json({
         msg: 'Maestro eliminado exitosamente',
@@ -54,9 +54,9 @@ const teacherDelete = async (req, res) =>{
     });
 }
 
-const teacherPost = async (req, res) => {
+const teacherPost = async(req, res) => {
     const { nombre, correo, password, curso, role } = req.body;
-    const teacher = new Teacher({ nombre, correo, password, curso, role});
+    const teacher = new Teacher({ nombre, correo, password, curso, role });
 
     const salt = bcryptjs.genSaltSync();
     console.log(password);
