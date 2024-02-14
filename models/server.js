@@ -8,7 +8,8 @@ class Server {
         this.app = express();
         this.port = process.env.PORT;
         this.studentPath = '/api/student';
-        this.animalesPath = '/api/teacher';
+        this.teacherPath = '/api/teacher';
+        this.authPath = '/api/auth';
 
         this.conectarDB();
         this.middlewares();
@@ -27,7 +28,8 @@ class Server {
 
     routes(){
         this.app.use(this.studentPath, require('../routes/student.routes'));
-        this.app.use(this.animalesPath, require('../routes/teacher.routes'));
+        this.app.use(this.teacherPath, require('../routes/teacher.routes'));
+        this.app.use(this.authPath, require('../routes/auth.routes'));
     }
 
     listen(){
@@ -35,6 +37,10 @@ class Server {
             console.log('Servidor ejecutandose y escuchandose en el puerto:', this.port)
         });
     }
+
+    
 }
 
+
 module.exports = Server;
+
