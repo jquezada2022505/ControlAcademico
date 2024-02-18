@@ -23,7 +23,7 @@ const StudentSchema = Schema({
     },
     role: {
         type: String,
-        enum: ["STUDENT_ROLE"]
+        default: ["STUDENT_ROLE"]
     },
     estado: {
         type: Boolean,
@@ -36,8 +36,8 @@ const StudentSchema = Schema({
 
 });
 
-StudentSchema.methods.toJSON = function(){
-    const{ __v, password, _id, ...student} = this.toObject();
+StudentSchema.methods.toJSON = function() {
+    const { __v, password, _id, ...student } = this.toObject();
     student.uid = _id;
     return student;
 };

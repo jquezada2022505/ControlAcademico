@@ -8,15 +8,15 @@ const {
     studentGet,
     getStudentById,
     putStudent,
-    studentDelete } = require('../controllers/students.controllers');
+    studentDelete
+} = require('../controllers/students.controllers');
 
 const router = Router();
 
 router.get("/", studentGet);
 
 router.get(
-    "/:id",
-    [
+    "/:id", [
         check('id', 'No es un id válido').isMongoId(),
         check('id').custom(existeStudentById),
         validarCampos,
@@ -24,8 +24,7 @@ router.get(
 );
 
 router.put(
-    "/:id",
-    [
+    "/:id", [
         check('id', 'No es un id válido').isMongoId(),
         check('id').custom(existeStudentById),
         check("role").custom(esRoleValido),
@@ -34,21 +33,18 @@ router.put(
 );
 
 router.post(
-    "/",
-    [
+    "/", [
         check("nombre", "Nombre no puede estar vacio").not().isEmpty(),
         check("password", "El password debe de ser mayor a 6 caracteres").isLength({ min: 6 }),
         check("correo", "Este no es un correo valido").isEmail(),
         check("curso", "debe ingresar un curso").not().isEmpty(),
         check("correo").custom(existeEmail),
-        check("role").custom(esRoleValido),
         validarCampos,
     ], studentPost
 );
 
 router.delete(
-    "/:id",
-    [
+    "/:id", [
         check('id', 'No es un id válido').isMongoId(),
         check('id').custom(existeStudentById),
         validarCampos,

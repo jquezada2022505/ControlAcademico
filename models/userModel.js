@@ -17,8 +17,6 @@ class UserModel {
     }
 
     authenticate(correo, password) {
-        // Aquí iría la lógica para verificar las credenciales y obtener el rol
-        // Simplemente devolvemos un objeto con la autenticación y el rol por simplicidad
         if (correo === 'estudiante' && password === 'contraseña') {
             return { authenticated: true, role: STUDENT_ROLE };
         } else if (correo === 'maestro' && password === 'contraseña') {
@@ -34,4 +32,3 @@ module.exports = {
     STUDENT_ROLE,
     TEACHER_ROLE
 };
-
