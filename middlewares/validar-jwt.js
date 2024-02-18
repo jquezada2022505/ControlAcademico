@@ -3,40 +3,40 @@ const Student = require('../models/student');
 const Teacher = require('../models/teacher');
 const { request, response } = require('express');
 
-const validarJWT = async(req = request, res = response, next)=> {
+const validarJWT = async(req = request, res = response, next) => {
     const token = req.header('x-token');
 
-    if(!token){
+    if (!token) {
         return res.status(401).json({
             msg: 'No hay token en la petición',
         });
     }
 
-    try{
+    try {
         const { uid } = jwt.verify(token, process.env.SECRETORPRIVATEKEY);
-        const student = await Student.findById(uid);
-        if(!student){
+        const teacher = await Teacher.findById(uid);
+        if (!teacher) {
             return res.status(401).json({
-                msg: "Estudiante no existe en la base de datos"
+                msg: "Maestro no existe en la base de datos"
             });
         }
 
-        if(!student.estado){
+        if (!teacher.estado) {
             return res.status(401).json({
                 msg: "Token no válido, estudiante con estado false"
             });
         }
 
-        req.student = student;
+        req.teacher = teacher;
         next();
-        
-    }catch(e){
+
+    } catch (e) {
         console.log(e);
         res.status(401).json({
             msg: "Token no válido"
         })
     }
-} 
+}
 
 module.exports = {
     validarJWT

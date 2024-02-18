@@ -1,0 +1,104 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Cursos",
+    "dateExported": "2024-02-18T08:27:04.892Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "e945eb1b-641b-4266-9a44-1957ce7f7cad",
+            "colId": "4cbb2646-9c2b-4365-aae9-ebbb9631a212",
+            "containerId": "",
+            "name": "cursosPOST",
+            "url": "localhost:3000/api/cursos",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-18T07:18:29.567Z",
+            "modified": "2024-02-18T08:18:21.382Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQxYjgyYjZiNjExNjg2ODdlYTY2ZjAiLCJpYXQiOjE3MDgyNDMzNDcsImV4cCI6MTcwODI0Njk0N30.uI5Pekcu30VTDHUpk2HRwoNWXodZ1857vXByNeOzXuY"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"nombre\": \"Estadistica\",\r\n    \"descripcion\": \"Curso impartido por teacher pablo\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ba1e9d53-c5f8-490e-b504-9574f48a73ba",
+            "colId": "4cbb2646-9c2b-4365-aae9-ebbb9631a212",
+            "containerId": "",
+            "name": "cursosGET",
+            "url": "localhost:3000/api/cursos",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-18T07:21:55.365Z",
+            "modified": "2024-02-18T08:12:29.774Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e93cfdd5-3ee5-4908-b6c7-cf48f19d1cab",
+            "colId": "4cbb2646-9c2b-4365-aae9-ebbb9631a212",
+            "containerId": "",
+            "name": "cursosGetById",
+            "url": "localhost:3000/api/cursos/65d1bbaa3ff18e8e8cfb3c32",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-18T08:14:21.643Z",
+            "modified": "2024-02-18T08:14:35.355Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7857fc5d-0a5b-4e5e-a30b-98d0ba778e67",
+            "colId": "4cbb2646-9c2b-4365-aae9-ebbb9631a212",
+            "containerId": "",
+            "name": "cursosPUT",
+            "url": "localhost:3000/api/cursos/65d1bbaa3ff18e8e8cfb3c32",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-18T08:14:46.328Z",
+            "modified": "2024-02-18T08:15:59.427Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQxYjgyYjZiNjExNjg2ODdlYTY2ZjAiLCJpYXQiOjE3MDgyNDMzNDcsImV4cCI6MTcwODI0Njk0N30.uI5Pekcu30VTDHUpk2HRwoNWXodZ1857vXByNeOzXuY"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"nombre\": \"asd\",\r\n    \"descripcion\": \"ada\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "920d6049-f755-451c-8396-ce81503d61f8",
+            "colId": "4cbb2646-9c2b-4365-aae9-ebbb9631a212",
+            "containerId": "",
+            "name": "cursosDELETE",
+            "url": "localhost:3000/api/cursos/65d1bbaa3ff18e8e8cfb3c32",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-02-18T08:16:23.437Z",
+            "modified": "2024-02-18T08:17:08.980Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQxYjgyYjZiNjExNjg2ODdlYTY2ZjAiLCJpYXQiOjE3MDgyNDMzNDcsImV4cCI6MTcwODI0Njk0N30.uI5Pekcu30VTDHUpk2HRwoNWXodZ1857vXByNeOzXuY"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
