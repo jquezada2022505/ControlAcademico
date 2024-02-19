@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Cursos",
-    "dateExported": "2024-02-18T08:27:04.892Z",
+    "dateExported": "2024-02-19T04:07:54.093Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,17 +14,17 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-02-18T07:18:29.567Z",
-            "modified": "2024-02-18T08:18:21.382Z",
+            "modified": "2024-02-19T02:31:03.608Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQxYjgyYjZiNjExNjg2ODdlYTY2ZjAiLCJpYXQiOjE3MDgyNDMzNDcsImV4cCI6MTcwODI0Njk0N30.uI5Pekcu30VTDHUpk2HRwoNWXodZ1857vXByNeOzXuY"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQyYmJlMmRiZTdmNTE4OWVlOTE0ODgiLCJpYXQiOjE3MDgzMDk3NTYsImV4cCI6MTcwODMxMzM1Nn0.5cKH5bSdUW74o9ACvW7Q6THa0jekTaPNajxRFQb1iV0"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\r\n    \"nombre\": \"Estadistica\",\r\n    \"descripcion\": \"Curso impartido por teacher pablo\"\r\n}",
+                "raw": "{\n    \"nombre\": \"Fisicaaaaaaaa\",\n    \"descripcion\": \"Curso impartido por teacher pabliño\"\n}",
                 "form": []
             },
             "tests": []
@@ -66,7 +66,7 @@
             "method": "PUT",
             "sortNum": 40000,
             "created": "2024-02-18T08:14:46.328Z",
-            "modified": "2024-02-18T08:15:59.427Z",
+            "modified": "2024-02-19T02:27:24.196Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -76,7 +76,7 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\r\n    \"nombre\": \"asd\",\r\n    \"descripcion\": \"ada\"\r\n}",
+                "raw": "{\n    \"nombre\": \"asd\",\n    \"descripcion\": \"ada\"\n}",
                 "form": []
             },
             "tests": []

@@ -55,15 +55,15 @@ const teacherDelete = async(req, res) => {
 }
 
 const teacherPost = async(req, res) => {
-    const { nombre, correo, password, curso, role } = req.body;
-    const teacher = new Teacher({ nombre, correo, password, curso, role });
+    const { nombre, correo, password, role } = req.body;
+    const teacher = new Teacher({ nombre, correo, password, role });
 
     const salt = bcryptjs.genSaltSync();
     console.log(password);
     teacher.password = bcryptjs.hashSync(password, salt);
 
     await teacher.save();
-    console.log({ nombre, correo, password, curso, role })
+    console.log({ nombre, correo, password, role })
     res.status(202).json({
         teacher
     });

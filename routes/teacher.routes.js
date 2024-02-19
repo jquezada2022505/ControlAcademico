@@ -8,15 +8,15 @@ const {
     teacherGet,
     getTeacherById,
     putTeacher,
-    teacherDelete } = require('../controllers/teacher.contoller');
+    teacherDelete
+} = require('../controllers/teacher.contoller');
 
 const router = Router();
 
 router.get("/", teacherGet);
 
 router.get(
-    "/:id",
-    [
+    "/:id", [
         check('id', 'No es un id válido').isMongoId(),
         check('id').custom(existeTeacherById),
         validarCampos,
@@ -24,8 +24,7 @@ router.get(
 );
 
 router.put(
-    "/:id",
-    [
+    "/:id", [
         check('id', 'No es un id válido').isMongoId(),
         check('id').custom(existeTeacherById),
         check("role").custom(esRoleValido),
@@ -34,12 +33,10 @@ router.put(
 );
 
 router.post(
-    "/",
-    [
+    "/", [
         check("nombre", "Nombre no puede estar vacio").not().isEmpty(),
         check("password", "El password debe de ser mayor a 6 caracteres").isLength({ min: 6 }),
         check("correo", "Este no es un correo valido").isEmail(),
-        check("curso", "debe ingresar un curso").not().isEmpty(),
         check("correo").custom(existeEmailTeacher),
         check("role").custom(esRoleValido),
         validarCampos,
@@ -47,8 +44,7 @@ router.post(
 );
 
 router.delete(
-    "/:id",
-    [
+    "/:id", [
         check('id', 'No es un id válido').isMongoId(),
         check('id').custom(existeTeacherById),
         validarCampos,

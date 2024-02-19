@@ -14,10 +14,6 @@ const TeacherSchema = Schema({
         type: String,
         require: [true, 'la clave es obligatoria']
     },
-    curso: {
-        type: String,
-        require: [true, 'el curso es obligatorio']
-    },
     img: {
         type: String
     },

@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Student",
-    "dateExported": "2024-02-18T08:27:46.803Z",
+    "dateExported": "2024-02-19T04:07:44.085Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,12 +14,12 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-02-18T05:57:58.929Z",
-            "modified": "2024-02-18T06:38:14.520Z",
+            "modified": "2024-02-19T03:03:51.981Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\":\"JOSUEEE\",\n  \"correo\": \"JSOUEEE@kinal.edu\",\n  \"password\": \"12SD4563123\",\n  \"curso\": \"Matematicas\"\n}",
+                "raw": "{\n  \"nombre\":\"Marcealo\",\n  \"correo\": \"Mwaaf23@gmail.com\",\n  \"password\": \"098923922\",\n  \"curso\": \"Mate\"\n}",
                 "form": []
             },
             "tests": []
@@ -43,16 +43,16 @@
             "colId": "d5212f65-8753-4f37-988c-02e92aee10d4",
             "containerId": "",
             "name": "studentPUT",
-            "url": "localhost:3000/api/student/65cc3954ee0cb3bcbd79e72f",
+            "url": "localhost:3000/api/student/65d2c517e056ba23e85dd24a",
             "method": "PUT",
             "sortNum": 30000,
             "created": "2024-02-18T05:57:58.931Z",
-            "modified": "2024-02-18T05:57:58.931Z",
+            "modified": "2024-02-19T03:04:18.788Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\":\"Marcealo\",\n  \"correo\": \"Marcelo123@gmail.com\",\n  \"password\": \"098923922\",\n  \"curso\": \"Matematica\",\n  \"role\": \"STUDENT_ROLE\"\n}",
+                "raw": "{\n  \"nombre\":\"Marcealo\",\n  \"correo\": \"Mwaaf23@gmail.com\",\n  \"password\": \"098923922\",\n  \"curso\": \"Mate\",\n  \"role\": \"STUDENT_ROLE\"\n  \n}",
                 "form": []
             },
             "tests": []
@@ -62,11 +62,11 @@
             "colId": "d5212f65-8753-4f37-988c-02e92aee10d4",
             "containerId": "",
             "name": "StudentDELETE ",
-            "url": "localhost:3000/api/student//65cc3c29ee0cb3bcbd79e73f",
+            "url": "localhost:3000/api/student/65d2bfe829e3ec263cde4d4f",
             "method": "DELETE",
             "sortNum": 40000,
             "created": "2024-02-18T05:57:58.932Z",
-            "modified": "2024-02-18T05:57:58.932Z",
+            "modified": "2024-02-19T04:03:49.403Z",
             "headers": [],
             "params": [],
             "tests": []

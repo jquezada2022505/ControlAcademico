@@ -35,6 +35,7 @@ const putStudent = async(req, res = response) => {
         const salt = bcryptjs.genSaltSync();
         resto.password = bcryptjs.hashSync(password, salt);
     }
+    z
 
     const student = await Student.findByIdAndUpdate(id, resto);
 
@@ -56,17 +57,24 @@ const studentDelete = async(req, res) => {
 
 const studentPost = async(req, res) => {
     const { nombre, correo, password, curso, role } = req.body;
-    const student = new Student({ nombre, correo, password, curso, role });
+    const existeStudent = await Student.findOne({ correo, curso });
+
+    if (existeStudent) {
+        return res.status(400).json({ error: 'Ya te has unido a este curso.' });
+    }
+    const studentCursos = await Student.find({ correo }).select('curso');
+    if (studentCursos.length >= 3) {
+        return res.status(400).json({ error: 'Ya te has unido al número máximo de cursos permitidos.' });
+    }
 
     const salt = bcryptjs.genSaltSync();
-    console.log(password);
-    student.password = bcryptjs.hashSync(password, salt);
+    const hashedPassword = bcryptjs.hashSync(password, salt);
+
+    const student = new Student({ nombre, correo, password: hashedPassword, curso, role });
 
     await student.save();
-    console.log({ nombre, correo, password, curso, role })
-    res.status(202).json({
-        student
-    });
+
+    res.status(202).json({ student });
 }
 
 module.exports = {
