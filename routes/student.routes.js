@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const { check } = require('express-validator');
-const { existeEmail, esRoleValido, existeStudentById } = require('../helpers/db-validators');
+const { existeEmail, existeStudentById } = require('../helpers/db-validators');
 const { validarCampos } = require('../middlewares/validarCampos');
 
 const {
@@ -27,7 +27,6 @@ router.put(
     "/:id", [
         check('id', 'No es un id válido').isMongoId(),
         check('id').custom(existeStudentById),
-        check("role").custom(esRoleValido),
         validarCampos,
     ], putStudent
 );

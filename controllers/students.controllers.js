@@ -29,13 +29,12 @@ const getStudentById = async(req, res) => {
 
 const putStudent = async(req, res = response) => {
     const { id } = req.params;
-    const { _id, password, google, role, ...resto } = req.body
+    const { _id, password, google, ...resto } = req.body
 
     if (password) {
         const salt = bcryptjs.genSaltSync();
         resto.password = bcryptjs.hashSync(password, salt);
     }
-    z
 
     const student = await Student.findByIdAndUpdate(id, resto);
 

@@ -2,7 +2,7 @@ const { Router } = require('express');
 const { check } = require('express-validator');
 const { validarCampos } = require('../middlewares/validarCampos');
 const { validarJWT } = require('../middlewares/validar-jwt');
-const { cursosPost, cursosGet, getCursoById, putCursos, cursosDelete } = require('../controllers/cursos.controller');
+const { cursosPost, cursosGet, getCursoById, putCursos, cursosDelete, asignarCursosPost } = require('../controllers/cursos.controller');
 const { existeCursosById } = require('../helpers/db-validators');
 const { esTEACHER_Role } = require("../middlewares/validar-roles");
 
@@ -14,16 +14,25 @@ router.post(
     "/", [
         validarJWT,
         esTEACHER_Role,
-        check("nombre", "Nmbre no puede estar vacio").not().isEmpty(),
+        check("nombre", "Nombre no puede estar vacio").not().isEmpty(),
         check("descripcion", "Descripcion no puede estar vacia").not().isEmpty(),
         validarCampos,
     ], cursosPost);
+
+router.post(
+    "/asignar/:id",
+    [
+        check("correo", "Correo no puede estar vacio").not().isEmpty(),
+    ], asignarCursosPost);
+
 router.get(
     "/:id", [
         check('id', 'No es un id valido').isMongoId(),
         check('id').custom(existeCursosById),
         validarCampos
     ], getCursoById);
+
+
 router.put(
     "/:id", [
         validarJWT,
@@ -33,6 +42,8 @@ router.put(
 
         validarCampos
     ], putCursos);
+
+
 router.delete(
     "/:id", [
         validarJWT,

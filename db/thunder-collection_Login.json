@@ -1,25 +1,44 @@
 {
     "client": "Thunder Client",
     "collectionName": "Login",
-    "dateExported": "2024-02-19T04:07:35.801Z",
+    "dateExported": "2024-02-27T23:22:35.938Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "f10bd750-db76-45c1-82f9-f8b0222b4943",
-            "colId": "b9ab707e-df5e-4123-9a5b-71bd4bb9db9b",
+            "_id": "07b27c1c-bfb4-4ace-9ef6-84cd3afa3a8e",
+            "colId": "2f461504-04a3-4ef1-9710-0113e04de9f7",
             "containerId": "",
             "name": "login",
             "url": "localhost:3000/api/auth/login",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-18T05:57:48.822Z",
-            "modified": "2024-02-19T02:29:16.805Z",
+            "created": "2024-02-27T19:06:21.573Z",
+            "modified": "2024-02-27T22:56:13.134Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"correo\": \"pabliñooo123@kinal.edu\",\n  \"password\": \"123456\"\n}\n",
+                "raw": "{\n  \"correo\": \"josueq@gmail.com\",\n  \"password\": \"123456\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "27ff8500-786f-4599-8450-be9de2f2fef2",
+            "colId": "2f461504-04a3-4ef1-9710-0113e04de9f7",
+            "containerId": "",
+            "name": "registrarUsuario",
+            "url": "localhost:3000/api/auth/signup",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-02-27T19:41:31.197Z",
+            "modified": "2024-02-27T22:56:02.727Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"js\",\n  \"correo\": \"josueq@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"estudiante\"\n}",
                 "form": []
             },
             "tests": []

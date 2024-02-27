@@ -29,7 +29,7 @@ const getTeacherById = async(req, res) => {
 
 const putTeacher = async(req, res = response) => {
     const { id } = req.params;
-    const { _id, password, google, role, ...resto } = req.body
+    const { _id, password, google, ...resto } = req.body
 
     if (password) {
         const salt = bcryptjs.genSaltSync();

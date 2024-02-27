@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const { TEACHER_ROLE } = require('./userModel');
 
 const TeacherSchema = Schema({
     nombre: {
@@ -7,19 +8,22 @@ const TeacherSchema = Schema({
     },
     correo: {
         type: String,
-        require: [true, 'el correo debe res obligatorio'],
+        require: [true, 'el correo debe ser obligatorio'],
         unique: true
     },
     password: {
         type: String,
         require: [true, 'la clave es obligatoria']
     },
+    curso: {
+        type: String
+    },
     img: {
         type: String
     },
     role: {
         type: String,
-        enum: ["TEACHER_ROLE"]
+        default: TEACHER_ROLE
     },
     estado: {
         type: Boolean,
@@ -31,5 +35,11 @@ const TeacherSchema = Schema({
     }
 
 });
+
+TeacherSchema.methods.toJSON = function() {
+    const { __v, password, _id, ...teacher } = this.toObject();
+    teacher.uid = _id;
+    return teacher;
+};
 
 module.exports = model('Teacher', TeacherSchema);

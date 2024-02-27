@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const { STUDENT_ROLE } = require('./userModel');
 
 const StudentSchema = Schema({
     nombre: {
@@ -15,15 +16,14 @@ const StudentSchema = Schema({
         require: [true, 'la clave es obligatoria']
     },
     curso: {
-        type: String,
-        require: [true, 'el curso es obligatorio']
+        type: String
     },
     img: {
         type: String
     },
     role: {
         type: String,
-        default: ["STUDENT_ROLE"]
+        default: STUDENT_ROLE
     },
     estado: {
         type: Boolean,

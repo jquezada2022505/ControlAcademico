@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const { check } = require('express-validator');
-const { existeEmailTeacher, esRoleValido, existeTeacherById } = require('../helpers/db-validators');
+const { existeEmailTeacher,  existeTeacherById } = require('../helpers/db-validators');
 const { validarCampos } = require('../middlewares/validarCampos');
 
 const {
@@ -27,7 +27,6 @@ router.put(
     "/:id", [
         check('id', 'No es un id válido').isMongoId(),
         check('id').custom(existeTeacherById),
-        check("role").custom(esRoleValido),
         validarCampos,
     ], putTeacher
 );
@@ -38,7 +37,6 @@ router.post(
         check("password", "El password debe de ser mayor a 6 caracteres").isLength({ min: 6 }),
         check("correo", "Este no es un correo valido").isEmail(),
         check("correo").custom(existeEmailTeacher),
-        check("role").custom(esRoleValido),
         validarCampos,
     ], teacherPost
 );

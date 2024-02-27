@@ -15,16 +15,6 @@ class UserModel {
             console.log('Conexión exitosa a MongoDB');
         });
     }
-
-    authenticate(correo, password) {
-        if (correo === 'estudiante' && password === 'contraseña') {
-            return { authenticated: true, role: STUDENT_ROLE };
-        } else if (correo === 'maestro' && password === 'contraseña') {
-            return { authenticated: true, role: TEACHER_ROLE };
-        } else {
-            return { authenticated: false };
-        }
-    }
 }
 
 module.exports = {
